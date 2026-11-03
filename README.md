@@ -126,20 +126,11 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\DesktopIconKeeper.ps1 -Act
 
 ## 八、兼容性
 
-- Windows 10 / Windows 11（桌面 `SysListView32` 的实现，Win7 理论上也可用但未测试）；
+- Windows 10 / Windows 11（桌面 `SysListView32` 的实现）；
 - Windows PowerShell 5.1 或 PowerShell 7+，无需任何额外模块；
 - 单屏 / 多屏、100%–200% 缩放均可；不需要管理员权限。
 
-## 九、验证记录
-
-测试环境：Windows 11 25H2（build 26200.9711），单屏 2560×1440 @125%，100 个桌面图标。
-
-- 自检：移动 3 个图标后恢复 → **100/100 精确复原**；
-- 真实切换测试：2560×1440@240Hz ↔ 1920×1080@60Hz，
-  监视进程在配置变化后约 2 秒检测到，切回大屏后 **100/100 图标位置与基线完全一致**；
-- 自动学习：手动移动图标约 6 秒后自动保存；恢复后重新学习正确布局。
-
-## 十、English summary
+## 九、English summary
 
 **DesktopIconKeeper** keeps your Windows desktop icon layout intact. It saves icon
 coordinates (by name, via cross-process `LVM_GETITEMPOSITION` / `LVM_SETITEMPOSITION`)
@@ -147,6 +138,6 @@ per display configuration, then restores them automatically whenever the monitor
 setup, resolution, DPI or Remote Desktop session changes. Single PowerShell file, no
 dependencies, no network access, no registry writes.
 
-## 十一、许可证
+## 十、许可证
 
 [MIT](LICENSE)

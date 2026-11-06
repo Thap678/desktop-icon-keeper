@@ -1,4 +1,4 @@
-# 桌面图标位置保镖 · DesktopIconKeeper
+# 桌面布局助手 · DesktopIconKeeper
 
 [![Platform](https://img.shields.io/badge/platform-Windows%2010%20%7C%2011-0078D6?logo=windows)](#兼容性)
 [![PowerShell](https://img.shields.io/badge/PowerShell-5.1%2B-5391FE?logo=powershell)](#兼容性)

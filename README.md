@@ -161,16 +161,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\tests\LayoutEngine.Tests.p
 - Windows 10 / Windows 11；Windows PowerShell 5.1 或 PowerShell 7+，无需额外模块；
 - 单屏 / 多屏、100%–200% 缩放；不需要管理员权限。
 
-## 九、验证记录
-
-测试环境：Windows 11 25H2（build 26200），单屏 2560×1440 @125%，75 个桌面图标，网格 27×11。
-
-- 单元测试：`tests/LayoutEngine.Tests.ps1` 20 项，PowerShell 5.1 与 7.6 均通过；
-- 自检：移动 3 个图标后恢复 → 75/75 精确复原；换屏演算 16×7 → 越界 0、重叠 0；
-- 监视：手动拖 1 个图标 → 约 3 秒后学习；随机打乱 20 个图标 → 约 3 秒后识别为系统重排并全部复原；
-- 旧版布局文件自动迁移，迁移后与当前桌面 0 差异。
-
-## 十、English summary
+## 九、English summary
 
 **DesktopIconKeeper** keeps your Windows desktop icon layout intact. It reads and writes icon positions
 via cross-process `LVM_GETITEMPOSITION` / `LVM_SETITEMPOSITION`, keyed by icon name. On the same display
@@ -180,6 +171,6 @@ preserved), minimal-disturbance overflow handling, and cluster-level push/collis
 A logon scheduled task starts the watcher immediately at sign-in; it corrects the layout at startup,
 after display changes, explorer restarts and system-wide reshuffles, while learning genuine manual moves.
 
-## 十一、许可证
+## 十、许可证
 
 [MIT](LICENSE)
